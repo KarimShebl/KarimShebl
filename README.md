@@ -367,7 +367,7 @@ signed main() {
 
 ## **Mid 2 - Problem B(Two Pointers):**
 
-```
+```c++
 #include <bits/stdc++.h>
 
 using namespace std;
