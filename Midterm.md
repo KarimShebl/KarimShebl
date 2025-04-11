@@ -429,7 +429,7 @@ signed main() {
 
 
 
-## **Mid 2 - Problem B(Two Pointers):**
+## **Mid 2 - Problem D(Data Structures - STL):**
 ```c++
 #include <bits/stdc++.h>
 
