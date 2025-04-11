@@ -420,3 +420,63 @@ signed main() {
     return 0;
 }
 ```
+
+
+
+
+
+
+
+
+
+## **Mid 2 - Problem B(Two Pointers):**
+```c++
+#include <bits/stdc++.h>
+
+using namespace std;
+#define int long long
+#define vi vector<int>
+#define vp vector<pair<int, int>>
+#define pb(x) push_back(x)
+#define all(x) x.begin(), x.end()
+#define FastIO ios_base::sync_with_stdio(false);cin.tie(nullptr);cout.tie(nullptr);
+#define mem(a, x) memset(a, x, sizeof a)
+#define Ones(n) __builtin_popcountll(n)
+#define endl '\n'
+
+void solve() {
+    int n, q;
+    cin >> n >> q;
+    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> pq;
+    for (int i = 0; i < n; ++i) {
+        int x;
+        cin >> x;
+        pq.push({i + 1, x});
+    }
+    while (q--) {
+        string s;
+        cin >> s;
+        if (s == "reserve") {
+            auto top = pq.top();
+            pq.pop();
+            cout << top.first << endl;
+            top.second--;
+            if (top.second > 0) pq.push(top);
+        } else {
+            int x;
+            cin >> x;
+            pq.push({x, 1});
+        }
+    }
+}
+
+signed main() {
+    FastIO
+    int T = 1;
+//    cin >> T;
+    while (T--) {
+        solve();
+    }
+    return 0;
+}
+```
